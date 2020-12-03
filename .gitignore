@@ -20,8 +20,6 @@
 /.env.production.local
 /.env.production
 
-/src/service/Firebase/firebase.js
-
 *.rest
 
 npm-debug.log*
