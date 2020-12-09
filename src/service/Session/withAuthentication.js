@@ -10,17 +10,9 @@ const withAuthentication = (Component) => {
 
     useEffect(() => {
       const load = async () => {
-        const current =
-          JSON.parse(window.localStorage.getItem('authUser')) || null;
-        await firebase.auth.onAuthStateChanged((authUser) => {
+        await firebase.authentication.onAuthStateChanged((authUser) => {
           if (authUser) {
             setAuthUser(authUser);
-            window.localStorage.setItem('authUser', JSON.stringify(authUser));
-          } else if (current === !null) {
-            setAuthUser(current);
-          } else {
-            setAuthUser(null);
-            window.localStorage.removeItem('authUser');
           }
         });
       };

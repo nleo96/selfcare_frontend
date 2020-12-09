@@ -75,6 +75,7 @@ const SignIn = (props) => {
 
       firebase
         .doSignInWithEmailAndPassword(email, password)
+       // .doSignInWithEmailAndPasswordPersistence(email, password)
         .then(() => {
           setUser({ ...user });
           history.push('/home');
@@ -113,7 +114,7 @@ const SignIn = (props) => {
 
         <Grid item>
           <Paper>
-            <form onSubmit={onSubmit} className={classes.form}>
+            <form onSubmit={onSubmit} className={classes.form} >
               <TextField
                 className={classes.textField}
                 fullWidth
@@ -121,7 +122,8 @@ const SignIn = (props) => {
                 name="email"
                 onChange={onChange}
                 type="text"
-                value={email}
+                value={email}  
+                autoComplete="email"        
                 variant="outlined"
                 inputRef={emailRef}
               />
@@ -133,6 +135,7 @@ const SignIn = (props) => {
                 onChange={onChange}
                 type="password"
                 value={password}
+                autoComplete="current-password"
                 variant="outlined"
                 inputRef={passwordRef}
               />

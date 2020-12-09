@@ -3,7 +3,8 @@
   "author": "sonjob",
   "email": "",
   "version": "1.0.0",
-  "proxy": "http://selfcare.machado.codes:4005",
+  "proxy": "http://selfcare.app.br:4005",
+  "homepage": ".",
   "private": true,
   "scripts": {
     "start": "react-scripts start",

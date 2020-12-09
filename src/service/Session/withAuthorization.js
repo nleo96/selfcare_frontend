@@ -11,10 +11,10 @@ const withAuthorization = (condition) => (Component) => {
 
     useEffect(() => {
       const load = async () => {
-        await firebase.auth.onAuthStateChanged((authUser) => {
+        await firebase.authentication.onAuthStateChanged((authUser) => {
           if (!condition(authUser)) {
             history.push('/sign-in');
-          }
+          } 
         });
       };
       load();
