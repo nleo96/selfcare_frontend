@@ -3,7 +3,7 @@
   "author": "sonjob",
   "email": "",
   "version": "1.0.0",
-  "proxy": "http://selfcare.app.br:4005",
+  "proxy": "http://selfcare.app.br",
   "homepage": ".",
   "private": true,
   "scripts": {
